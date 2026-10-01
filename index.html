@@ -32,7 +32,7 @@
 <body>
 
     <button class="copy-btn" onclick="copyAndClose()">
-        Нажми, чтобы скопировать бинд!
+                Click to copy
     </button>
    <script>
 function copyAndClose() {
@@ -41,10 +41,10 @@ function copyAndClose() {
 
     navigator.clipboard.writeText(textToCopy).then(() => {
         const btn = document.querySelector('.copy-btn');
-        btn.innerText = "Успешно скопировано!";
+                btn.innerText = "Copied!";
                 setTimeout(() => {
             window.location.href = 'https://steampowered.com';
-        }, 1000);
+        }, 260);
         btn.style.backgroundColor = "#5c7e10";
 
         
