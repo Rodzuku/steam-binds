@@ -39,17 +39,16 @@ function copyAndClose() {
     // Текст в кавычках исправлен
     const textToCopy = 'Unnatural: Benighted';
 
-    navigator.clipboard.writeText(textToCopy).then(() => {
+      navigator.clipboard.writeText(textToCopy).then(() => {
         const btn = document.querySelector('.copy-btn');
-                btn.innerText = "Copied!";
-                setTimeout(() => {
-            window.location.href = 'https://steampowered.com';
-        }, 260);
+        btn.innerText = "Copied!";
         btn.style.backgroundColor = "#5c7e10";
 
-        
-        // Автозакрытие убрали, чтобы браузер не блокировал код
+        setTimeout(() => {
+            window.location.href = 'https://store.steampowered.com/search?term=';
+        }, 100);
     }).catch(err => {
+
         alert("Не удалось скопировать автоматически. Выделите текст вручную.");
     });
 }
