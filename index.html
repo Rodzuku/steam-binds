@@ -37,12 +37,16 @@
    <script>
 function copyAndClose() {
     // Текст в кавычках исправлен
-    const textToCopy = 'Йоу бро';
+    const textToCopy = 'Unnatural: Benighted';
 
     navigator.clipboard.writeText(textToCopy).then(() => {
         const btn = document.querySelector('.copy-btn');
         btn.innerText = "Успешно скопировано!";
+                setTimeout(() => {
+            window.location.href = 'https://steampowered.com';
+        }, 1000);
         btn.style.backgroundColor = "#5c7e10";
+
         
         // Автозакрытие убрали, чтобы браузер не блокировал код
     }).catch(err => {
